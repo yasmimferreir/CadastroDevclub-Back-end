@@ -5,7 +5,15 @@
 
 Projeto focado nas habilidades Back-end, desenvolvimento de sistema Web FullStack, projeto do curso DevClub, 
 O projeto contém uma página de Login e cadastro para entrar no sistema, página de cadastro, direcionamento de tela com o usuarios cadastrado,
-excluir usuario. Utilização de express, nodemon, sucrase e entre outtos
+excluir usuario. Utilização de express, nodemon, sucrase e entre outtos.
+
+
+🚀 Projeto 
+<br>
+
+<img src="https://github.com/yasmimferreir/CadastroDevclub-Back-end/assets/97356148/4367deaf-f020-49f9-9cee-507d9a4c0d52" width="900px">
+
+<br>
 
 ⚔️Ferramentas de Software usada:
 <aside>
