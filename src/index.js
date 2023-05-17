@@ -1,13 +1,19 @@
-import express from "express";
+import express, { request, response } from "express";
 
 import * as uuid from "uuid";
 const bodyParser = require("body-parser");
 const app = express();
-const port = 3000;
+const port = 3001;
 
 const express = app.use(bodyParser.json());
 
 const users = [];
+
+const middlewares = (request, response, next) => {
+  console.log("Fui chamadooo");
+};
+
+app.use(middlewares);
 
 app.get("/users", (request, response) => {
   return response.json(users);
@@ -40,6 +46,21 @@ app.put("/users/:id", (request, response) => {
   users[index] = updateUser;
 
   return response.json(updateUser);
+});
+
+app.delete("/users/:id", (request, response) => {
+  const { id } = request.params;
+  const index = users.findIndex((user) => user.id === id);
+
+  if (index < 0) {
+    return response
+      .status(404)
+      .json({ error: "Id não encontrado/incorreto, verifique os dados" });
+  }
+
+  users.splice(index, 1);
+
+  return response.status(204).json(users);
 });
 
 app.listen(port, () => {
