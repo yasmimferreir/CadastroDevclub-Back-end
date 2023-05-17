@@ -1,4 +1,4 @@
-import express, { request, response } from "express";
+import express from "express";
 
 import * as uuid from "uuid";
 const bodyParser = require("body-parser");
